@@ -14,6 +14,7 @@
         <q-toolbar-title>
           Wong
         </q-toolbar-title>
+        <img src="https://i.pinimg.com/564x/50/a4/c3/50a4c316799db6a581fcda77bb257db6.jpg" alt="Logo" style="height: 30px; margin-left: auto; margin-right: 10px;" />
       </q-toolbar>
     </q-header>
 
@@ -44,7 +45,7 @@
             <q-item-label>Salir</q-item-label>
           </q-item-section>
         </q-item>
-        
+
         <!-- Añadir más elementos de menú según sea necesario -->
       </q-list>
     </q-drawer>
