@@ -9,7 +9,7 @@
           />
         </div>
         <q-avatar size="80px" class="q-mb-md">
-          <q-icon name="person" size="56px" color="red" />
+          <q-icon name="person" size="56ppx" color="red" />
         </q-avatar>
         <div style="font-size: 1.5em;color:black;font-weight: 100" class="text-center">Login</div>
       </q-card-section>
