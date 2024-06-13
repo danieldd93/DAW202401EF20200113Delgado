@@ -2,6 +2,12 @@
   <q-page class="login-page">
     <div class="login-card q-pa-md">
       <q-card-section class="text-center q-py-xl">
+        <div style="position: absolute; top: 10px; left: 10px; z-index: 1000">
+          <img
+            src="https://i.pinimg.com/564x/50/a4/c3/50a4c316799db6a581fcda77bb257db6.jpg"
+            style="height: 100px; width: auto"
+          />
+        </div>
         <q-avatar size="80px" class="q-mb-md">
           <q-icon name="person" size="56ppx" color="red" />
         </q-avatar>
@@ -50,6 +56,20 @@
         <div class="row justify-center q-mt-md">
           <q-btn fab mini round color="blue-8" class="q-mx-xs">
             <q-icon name="facebook" />
+          </q-btn>
+          <q-btn fab mini round color="deep-purple" class="q-mx-xs">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/600px-Instagram_logo_2022.svg.png"
+              alt="Instagram"
+              style="width: 24px; height: 24px"
+            />
+          </q-btn>
+          <q-btn fab mini round color="light-blue" class="q-mx-xs">
+            <img
+              src="https://i.pinimg.com/564x/7d/44/d5/7d44d55ead7dda48bd95632d92fb259d.jpg"
+              alt="Twitter"
+              style="width: 24px; height: 24px"
+            />
           </q-btn>
         </div>
         <div class="q-mt-md text-center">Or Sign Up Using</div>
