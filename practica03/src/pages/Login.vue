@@ -1,13 +1,13 @@
 <template>
   <q-page class="login-page">
-    <div class="login-card q-pa-xs">
-      <q-card-section class="text-center q-py-xs">
+    <div class="login-card q-pa-md">
+      <q-card-section class="text-center q-py-xl">
         <q-avatar size="80px" class="q-mb-md">
-          <q-icon name="person" size="56px" color="primary" />
+          <q-icon name="person" size="56px" color="red" />
         </q-avatar>
       </q-card-section>
-      <q-card-section class="text-center q-py-xl">
-        <div class="text-h4 q-mb-md">Login</div>
+
+      <q-card-section>
         <q-form @submit="onSubmit">
           <q-input
             outlined
@@ -16,6 +16,7 @@
             dense
             class="q-mb-md"
             prepend-inner-icon="account_circle"
+            color="red"
             required
           />
           <q-input
@@ -26,27 +27,35 @@
             dense
             class="q-mb-md"
             prepend-inner-icon="lock"
+            color="red"
             required
           />
-          <div class="text-center q-mb-md">
-            <q-btn flat label="Te olvidaste tu contraseña?" color="primary" @click="onForgotPassword" />
+          <div class="text-right q-mb-md">
+            <q-btn flat label="Forgot password?" color="red" @click="onForgotPassword" />
           </div>
           <q-btn
             type="submit"
-            label="ENTRAR"
-            color="primary"
+            icon="login"
+            color="red"
             class="full-width q-mb-md"
             unelevated
-            style="background: linear-gradient(to right, #56CCF2, #2F80ED);"
+            style="background: linear-gradient(to right, #FF6F61, #D32F2F);"
           />
         </q-form>
+        <div class="q-mt-md text-center">Or Sign Up Using</div>
         <div class="row justify-center q-mt-md">
           <q-btn fab mini round color="blue-8" class="q-mx-xs">
             <q-icon name="facebook" />
           </q-btn>
+          <q-btn fab mini round color="blue" class="q-mx-xs">
+            <q-icon name="twitter" />
+          </q-btn>
+          <q-btn fab mini round color="red-5" class="q-mx-xs">
+            <q-icon name="google" />
+          </q-btn>
         </div>
-        <div class="q-mt-md">O registrate por el formulario</div>
-        <q-btn flat label="REGISTRARSE" color="primary" class="q-mt-md" @click="onSignUp" />
+        <div class="q-mt-md text-center">Or Sign Up Using</div>
+        <q-btn flat label="SIGN UP" color="red" class="q-mt-md" @click="onSignUp" />
       </q-card-section>
     </div>
   </q-page>
@@ -55,16 +64,18 @@
 <script>
 export default {
   name: 'LoginPage',
-  data () {
+  data() {
     return {
       username: '',
       password: ''
     }
   },
   methods: {
-    onSubmit () {
-      // Handle login logic here
-      alert(`Username: ${this.username}, Password: ${this.password}`);
+    onSubmit() {
+      // Aquí puedes manejar la lógica del login
+      // Por ejemplo, puedes agregar una llamada a una API para autenticar al usuario
+      // Si el login es exitoso, redirige a la página de productos
+      this.$router.push('/products');
     },
     onForgotPassword() {
       // Handle forgot password logic
@@ -84,16 +95,19 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FF6F61 0%, #D32F2F 100%);
 }
 
 .login-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 1);
   border-radius: 15px;
   padding: 2rem;
   max-width: 400px;
   width: 100%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .q-input__inner {
