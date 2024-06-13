@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR fFf">
+    <q-header class="bg-red-8 text-white">
       <q-toolbar>
         <q-btn
           flat
@@ -9,13 +9,11 @@
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
+          class="text-white"
         />
-
         <q-toolbar-title>
           Quasar App
         </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
     </q-header>
 
@@ -23,101 +21,70 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
+      class="text-black"
     >
       <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
+        <q-item-label header>Menu</q-item-label>
 
-        <EssentialLink
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item to="/products" class="text-red">
+          <q-item-section avatar>
+            <q-icon name="store" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Products</q-item-label>
+          </q-item-section>
+        </q-item>
+
+        <!-- Botón de Salir -->
+        <q-item clickable @click="logout">
+          <q-item-section avatar>
+            <q-icon name="exit_to_app" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Salir</q-item-label>
+          </q-item-section>
+        </q-item>
+        
+        <!-- Añadir más elementos de menú según sea necesario -->
       </q-list>
     </q-drawer>
 
-    <q-page-container>
+    <q-page-container class="bg-red-1 text-dark">
       <router-view />
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  },
-  {
-    title: 'Login',
-    caption: 'Go to login page',
-    icon: 'login',
-    link: '/login'
-  }
-]
-
-export default defineComponent({
+export default {
   name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
-
-  data () {
+  data() {
     return {
-      linksList,
       leftDrawerOpen: false
     }
   },
-
   methods: {
-    toggleLeftDrawer () {
+    toggleLeftDrawer() {
       this.leftDrawerOpen = !this.leftDrawerOpen
+    },
+    logout() {
+      // Redirigir al usuario a la página de login
+      this.$router.push('/login');
     }
   }
-})
+}
 </script>
+
+<style scoped>
+.bg-red-8 {
+  background-color: #C62828 !important;
+}
+
+.bg-red-2 {
+  background-color: #FFCDD2 !important;
+}
+
+.bg-red-1 {
+  background-color: #FFEBEE !important;
+}
+</style>
