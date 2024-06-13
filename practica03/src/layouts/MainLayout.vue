@@ -12,7 +12,7 @@
           class="text-white"
         />
         <q-toolbar-title>
-          Quasar App
+          Wong
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -31,7 +31,7 @@
             <q-icon name="store" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Products</q-item-label>
+            <q-item-label>Productos</q-item-label>
           </q-item-section>
         </q-item>
 
