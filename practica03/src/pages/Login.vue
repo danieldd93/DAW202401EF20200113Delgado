@@ -5,6 +5,7 @@
         <q-avatar size="80px" class="q-mb-md">
           <q-icon name="person" size="56px" color="red" />
         </q-avatar>
+        <div style="font-size: 1.5em;color:black;font-weight: 300" class="text-center">Login</div>
       </q-card-section>
 
       <q-card-section>
@@ -31,18 +32,23 @@
             required
           />
           <div class="text-right q-mb-md">
-            <q-btn flat label="Forgot password?" color="red" @click="onForgotPassword" />
+            <q-btn
+              flat
+              label="Forgot password?"
+              color="red"
+              @click="onForgotPassword"
+            />
           </div>
           <q-btn
             type="submit"
             icon="login"
             color="red"
+            label="Entrar"
             class="full-width q-mb-md"
             unelevated
             style="background: linear-gradient(to right, #FF6F61, #D32F2F);"
           />
         </q-form>
-        <div class="q-mt-md text-center">Or Sign Up Using</div>
         <div class="row justify-center q-mt-md">
           <q-btn fab mini round color="blue-8" class="q-mx-xs">
             <q-icon name="facebook" />
@@ -55,7 +61,13 @@
           </q-btn>
         </div>
         <div class="q-mt-md text-center">Or Sign Up Using</div>
-        <q-btn flat label="SIGN UP" color="red" class="q-mt-md" @click="onSignUp" />
+        <q-btn
+          flat
+          label="SIGN UP"
+          color="red"
+          class="q-mt-md"
+          @click="onSignUp"
+        />
       </q-card-section>
     </div>
   </q-page>
