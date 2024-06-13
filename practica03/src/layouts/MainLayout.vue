@@ -11,10 +11,12 @@
           @click="toggleLeftDrawer"
           class="text-white"
         />
-        <q-toolbar-title>
-          Wong
-        </q-toolbar-title>
-        <img src="https://i.pinimg.com/564x/50/a4/c3/50a4c316799db6a581fcda77bb257db6.jpg" alt="Logo" style="height: 30px; margin-left: auto; margin-right: 10px;" />
+        <q-toolbar-title> Wong </q-toolbar-title>
+        <img
+          src="https://i.pinimg.com/564x/50/a4/c3/50a4c316799db6a581fcda77bb257db6.jpg"
+          alt="Logo"
+          style="height: 30px; margin-left: auto; margin-right: 10px"
+        />
       </q-toolbar>
     </q-header>
 
@@ -58,34 +60,34 @@
 
 <script>
 export default {
-  name: 'MainLayout',
+  name: "MainLayout",
   data() {
     return {
-      leftDrawerOpen: false
-    }
+      leftDrawerOpen: false,
+    };
   },
   methods: {
     toggleLeftDrawer() {
-      this.leftDrawerOpen = !this.leftDrawerOpen
+      this.leftDrawerOpen = !this.leftDrawerOpen;
     },
     logout() {
       // Redirigir al usuario a la página de login
-      this.$router.push('/login');
-    }
-  }
-}
+      this.$router.push("/login");
+    },
+  },
+};
 </script>
 
 <style scoped>
 .bg-red-8 {
-  background-color: #C62828 !important;
+  background-color: #c62828 !important;
 }
 
 .bg-red-2 {
-  background-color: #FFCDD2 !important;
+  background-color: #ffcdd2 !important;
 }
 
 .bg-red-1 {
-  background-color: #FFEBEE !important;
+  background-color: #ffebee !important;
 }
 </style>
