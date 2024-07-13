@@ -1,6 +1,6 @@
 <template>
   <q-layout view="hHh lpR fFf">
-    <q-header class="bg-red-8 text-white">
+    <q-header class="bg-brown-8 text-white">
       <q-toolbar>
         <q-btn
           flat
@@ -11,9 +11,9 @@
           @click="toggleLeftDrawer"
           class="text-white"
         />
-        <q-toolbar-title> Wong </q-toolbar-title>
+        <q-toolbar-title> MovieDB </q-toolbar-title>
         <img
-          src="https://i.pinimg.com/564x/50/a4/c3/50a4c316799db6a581fcda77bb257db6.jpg"
+          src=""
           alt="Logo"
           style="height: 30px; margin-left: auto; margin-right: 10px"
         />
@@ -29,12 +29,12 @@
       <q-list>
         <q-item-label header>Menu</q-item-label>
 
-        <q-item to="/products" class="text-red">
+        <q-item to="/products" class="text-brown">
           <q-item-section avatar>
             <q-icon name="store" />
           </q-item-section>
           <q-item-section>
-            <q-item-label>Productos</q-item-label>
+            <q-item-label>Series</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -52,7 +52,7 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container class="bg-red-1 text-dark">
+    <q-page-container class="bg-brown-1 text-dark">
       <router-view />
     </q-page-container>
   </q-layout>
